@@ -12,4 +12,4 @@ const HeaderContent = () => {
     );
   };
   
-  export default ImageThumbnail;
+  export default HeaderContent;
