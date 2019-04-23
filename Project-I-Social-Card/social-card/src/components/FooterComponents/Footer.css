@@ -12,7 +12,15 @@
 }
 
 .click {
-    padding-left: 10%;
+    padding-left: 8%;
     width: 25px;
     height: 25px;
+    transform: scale(.65);
+}
+
+.counter {
+    padding-left: 1%;
+    font-size: .7em;
+    font-weight: 600;
+    color: grey;
 }
