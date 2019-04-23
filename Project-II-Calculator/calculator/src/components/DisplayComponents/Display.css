@@ -1,0 +1,16 @@
+.calculatorDisplay {
+    width: 100%;
+    height: 20vh;
+    background: rgba(0, 0, 0, 0.476);
+}
+
+.answer {
+    height: 20vh;
+    margin: 0 5%;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 12vh;
+    color: lightgrey;
+}

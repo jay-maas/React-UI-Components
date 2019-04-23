@@ -68,7 +68,7 @@
 - **BEFORE YOU DO ANYTHING ELSE READ [This](https://reactjs.org/docs/thinking-in-react.html)**
 - This is the time to stop and break down this image in terms of components. Each container on the screen should give you an idea of what your components should be. You're now about to begin your journey into learning how to think in React.
 
-#### Project 2 MVP requirements
+#### Project 2 MVP requirements 
 
 - Create a `<NumberButton />` component that can accept `props` and display any number/symbol passed down as `text`.
   - Example your component should be able to render a dynamic prop called text:
