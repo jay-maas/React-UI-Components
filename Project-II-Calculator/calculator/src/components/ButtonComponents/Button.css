@@ -9,6 +9,8 @@
 
 .number:first-child {
     width: 100%;
+    background: rgb(213, 1, 1);
+    color: white;
 }
 
 .number {
@@ -22,7 +24,7 @@
     justify-content: center;
     font-size: 3.4em;
     background: grey;
-    color: greenyellow;
+    color: white;
 }
 
 .number:last-child {
@@ -34,6 +36,8 @@
     height: 77vh;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .action {
@@ -45,5 +49,9 @@
     font-size: 4em;
     color: white;
     border: 1px solid white;
-    background: rgba(255, 0, 0, 0.374);
+    background: rgb(213, 1, 1);
+}
+
+.decimal {
+    background: grey;
 }

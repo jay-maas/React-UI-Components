@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Sky from 'react-sky';
 import './App.css';
 import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay';
 import NumberButton from './components/ButtonComponents/NumberButton';
@@ -65,9 +66,9 @@ class App extends Component{
   ],
     action: [
         {
-        name: "/",
-        text: "÷",
-        buttonStylings: "action divide"
+        name: "backspace",
+        text: "←",
+        buttonStylings: "action backspace",
         },
         {
         name: "*",
@@ -75,20 +76,41 @@ class App extends Component{
         buttonStylings: "action multiply"
         },
         {
+        name: "+",
+        text: "+",
+        buttonStylings: "action sum"
+        },
+        {
+        name: "(",
+        text: "(",
+        buttonStylings: "action left-par"
+        },
+        {
+        name: ".",
+        text: ".",
+        buttonStylings: "action decimal"
+        },
+        {
+        name: "/",
+        text: "÷",
+        buttonStylings: "action divide"
+        },
+        {
         name: "-",
         text: "-",
         buttonStylings: "action minus"
         },
         {
-        name: "+",
-        text: "+",
-        buttonStylings: "action sum"
+        name: ")",
+        text: ")",
+        buttonStylings: "action"
         },
         {
         name: "=",
         text: "=",
         buttonStylings: "action equals"
         }
+
     ]
   }
     
@@ -106,6 +128,9 @@ class App extends Component{
     }
     else if(button === "clear") {
       this.reset()
+    }
+    else if(button === "backspace") {
+      this.backspace()
     }
     else {
       this.setState({
@@ -140,31 +165,53 @@ class App extends Component{
     })
   };
 
+  backspace = () => {
+    this.setState({
+      total: this.state.total.slice(0,-1)
+    })
+  }
+
   render() {
     // if (this.state.total)
-    if (this.state.total.length >= 15) {
-      alert ('Please do not use such a large number. This function is not supported yet')
-        this.reset();
+    let answerDOM = document.querySelector(".answer");
+    if (this.state.total.length >= 9) {
+      // answerDOM.classList.
     } 
     return (
+
       <div className="container">
-
-        <CalculatorDisplay total={this.state.total} />
-
-        <div className="buttons">
-
-          <NumberButton 
-          onClick={(e) => this.click(e.target.name)}
-          numbers={this.props.number}
-            />
-
-          <ActionButton 
-          onClick={(e) => this.click(e.target.name)}
-          actions={this.props.action}
+        <Sky
+            images={{
+              /* FORMAT AS FOLLOWS */
+              0: "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-128.png",  /* You can pass as many images as you want */
+              1: "https://cdn2.iconfinder.com/data/icons/designer-skills/128/react-128.png",
+              2: "https://cdn4.iconfinder.com/data/icons/logos-3/426/react_js-128.png"
+            }}
+            how={130} /* Pass the number of images Sky will render chosing randomly */
+            time={10} /* time of animation */
+            size={'100px'} /* size of the rendered images */
+            background={'url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")'} /* color of background */
           />
 
+        <div className="calcContainer">
+  
+          <CalculatorDisplay total={this.state.total} />
+  
+          <div className="buttons">
+  
+            <NumberButton 
+            onClick={(e) => this.click(e.target.name)}
+            numbers={this.props.number}
+              />
+  
+            <ActionButton 
+            onClick={(e) => this.click(e.target.name)}
+            actions={this.props.action}
+            />
+  
+          </div>
+  
         </div>
-
       </div>
     );
   }

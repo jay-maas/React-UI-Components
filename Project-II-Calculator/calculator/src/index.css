@@ -3,3 +3,15 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+/* Keyframes */
+@keyframes rotate-in-hor {
+  0% {
+    transform: rotateX(360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
