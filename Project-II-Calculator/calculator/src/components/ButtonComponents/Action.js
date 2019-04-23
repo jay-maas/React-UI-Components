@@ -3,10 +3,10 @@ import './Button.css';
 
 class Action extends Component {
     render() {
-        const {text, buttonStylings} = this.props;
+        const {name, text, buttonStylings} = this.props;
 
         return (
-            <button className={buttonStylings}>{text}</button>
+            <button name={name} className={buttonStylings}>{text}</button>
         );
     }
   };

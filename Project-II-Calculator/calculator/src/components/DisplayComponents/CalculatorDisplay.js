@@ -1,12 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Display.css';
 
-const CalculatorDisplay = () => {
-    return (
-      <div className="calculatorDisplay">
-          <div className="answer">0</div>
-      </div>
-    );
+class CalculatorDisplay extends Component {
+    render() {
+        let {total} = this.props;
+        return (
+            <div className="calculatorDisplay">
+                <div className="answer">{total}</div>
+            </div>
+        );
+    }
   };
   
   export default CalculatorDisplay;
