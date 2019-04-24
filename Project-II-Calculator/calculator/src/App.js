@@ -5,6 +5,7 @@ import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay'
 import NumberButton from './components/ButtonComponents/NumberButton';
 import ActionButton from './components/ButtonComponents/ActionButton';
 
+
 class App extends Component{
   static defaultProps = {
     number: [
@@ -125,6 +126,7 @@ class App extends Component{
   click = button => {
     if(button === "=") {
       this.calculate()
+
     }
     else if(button === "clear") {
       this.reset()
@@ -149,6 +151,7 @@ class App extends Component{
     }
     try {
       this.setState({
+        // eval is subject to 3rd party attackers looseJSONParse
         // eslint-disable-next-line
         total: (eval(checkResult) || "") + ""
       })
@@ -172,15 +175,10 @@ class App extends Component{
   }
 
   render() {
-    // if (this.state.total)
-    let answerDOM = document.querySelector(".answer");
-    if (this.state.total.length >= 9) {
-      // answerDOM.classList.
-    } 
     return (
 
       <div className="container">
-        <Sky
+          <Sky
             images={{
               /* FORMAT AS FOLLOWS */
               0: "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-128.png",  /* You can pass as many images as you want */

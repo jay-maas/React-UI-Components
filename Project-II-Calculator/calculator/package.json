@@ -5,6 +5,8 @@
   "dependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-poke-sprites": "^0.0.8",
+    "react-pokemon-gif": "^1.0.2",
     "react-scripts": "1.1.4",
     "react-sky": "^1.1.0"
   },
