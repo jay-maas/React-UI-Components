@@ -1,0 +1,26 @@
+.footer {
+    padding-left: 62px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer .click:first-child {
+    padding-left: 3%;
+}
+
+.click {
+    padding-left: 8%;
+    width: 25px;
+    height: 25px;
+    transform: scale(.65);
+}
+
+.counter {
+    padding-left: 1%;
+    font-size: .7em;
+    font-weight: 600;
+    color: grey;
+}
