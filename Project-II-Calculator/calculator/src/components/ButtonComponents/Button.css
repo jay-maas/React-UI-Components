@@ -1,0 +1,57 @@
+.numberButtons {
+    width: 75%;
+    height: 77vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.number:first-child {
+    width: 100%;
+    background: rgb(213, 1, 1);
+    color: white;
+}
+
+.number {
+    justify-content: center;
+    align-content: center;
+    width: 33.3%;
+    height: 20%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.4em;
+    background: grey;
+    color: white;
+}
+
+.number:last-child {
+    width: 100%;
+}
+
+.actionButtons {
+    width: 25%;
+    height: 77vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    font-size: 4em;
+    color: white;
+    border: 1px solid white;
+    background: rgb(213, 1, 1);
+}
+
+.decimal {
+    background: grey;
+}

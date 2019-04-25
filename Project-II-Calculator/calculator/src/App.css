@@ -1,0 +1,18 @@
+.calcContainer {
+    margin: 0 auto;
+    width: 500px;
+    padding-top: 5vh;
+    animation-name: rotate-in-hor;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    opacity: .8;
+}
+
+.buttons {
+    display: flex;
+}
+
+.container {
+    width: 100vw;
+    max-height: 100vh;
+}
